@@ -818,7 +818,7 @@ autoEquipToolsFolder:AddSwitch("Auto Punch", function(Value)
                         punch.attackTime.Value = 0
                     end
                 end
-                task.wait(0.01)
+                task.wait(0.0000001)
             end
         end)
         
@@ -1697,16 +1697,13 @@ Killer:AddSwitch("Auto Punch", function(state)
 						punch.attackTime.Value = 0
 					end
 				end
-				task.wait(0.00001)
-			end
 		end)
 		task.spawn(function()
 			while _G.fastHitActive do
 				local punch = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Punch")
 				if punch then
 					punch:Activate()
-				end
-				task.wait(0.00001)
+							end
 			end
 		end)
 	else
