@@ -1695,15 +1695,15 @@ Killer:AddSwitch("Auto Punch", function(state)
 					punch.Parent = LocalPlayer.Character
 					if punch:FindFirstChild("attackTime") then
 						punch.attackTime.Value = 0
-					end
-				end
-		end)
+				   end
+			  end
+		 end)
 		task.spawn(function()
 			while _G.fastHitActive do
 				local punch = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Punch")
 				if punch then
 					punch:Activate()
-							end
+				end
 			end
 		end)
 	else
