@@ -1696,6 +1696,7 @@ Killer:AddSwitch("Auto Punch", function(state)
 					if punch:FindFirstChild("attackTime") then
 						punch.attackTime.Value = 0
 				   end
+				task.wait()			
 			  end
 		 end)
 		task.spawn(function()
@@ -1704,6 +1705,7 @@ Killer:AddSwitch("Auto Punch", function(state)
 				if punch then
 					punch:Activate()
 				end
+				task.wait()
 			end
 		end)
 	else
