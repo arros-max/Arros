@@ -695,7 +695,7 @@ local targetRebirthToggle = rebirthFolder:AddSwitch("Start", function(enabled)
                 -- Hacer rebirth si ya tienes fuerza suficiente
                 if leaderstats.Strength.Value >= requiredStrength then
                     replicatedStorage.rEvents.rebirthRemote:InvokeServer("rebirthRequest")
-                    task.wait(0.7)
+                    task.wait(0.5)
                 else
                     -- Farmear fuerza
                     for i = 1, repSpeed do
@@ -703,7 +703,7 @@ local targetRebirthToggle = rebirthFolder:AddSwitch("Start", function(enabled)
                     end
                 end
 
-                task.wait(0.1)
+                task.wait(0.01)
             end
         end)
     end
@@ -818,7 +818,7 @@ autoEquipToolsFolder:AddSwitch("Auto Punch", function(Value)
                         punch.attackTime.Value = 0
                     end
                 end
-                task.wait(0.1)
+                task.wait(0.01)
             end
         end)
         
@@ -1697,7 +1697,7 @@ Killer:AddSwitch("Auto Punch", function(state)
 						punch.attackTime.Value = 0
 					end
 				end
-				task.wait(0.1)
+				task.wait(0.00001)
 			end
 		end)
 		task.spawn(function()
@@ -1706,7 +1706,7 @@ Killer:AddSwitch("Auto Punch", function(state)
 				if punch then
 					punch:Activate()
 				end
-				task.wait(0.1)
+				task.wait(0.00001)
 			end
 		end)
 	else
